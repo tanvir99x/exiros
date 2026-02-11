@@ -1,0 +1,21 @@
+{
+  "name": "exiros-frontend",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@farcaster/auth-kit": "^0.8.2",
+    "@tanstack/react-query": "^5.0.0",
+    "next": "14.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "viem": "2.12.3",
+    "wagmi": "2.12.7"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.13"
+  }
+}

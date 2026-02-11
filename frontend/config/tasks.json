@@ -1,0 +1,20 @@
+[
+  {
+    "id": "gm_base",
+    "title": "Say GM on Base",
+    "link": "https://basescan.org",
+    "fee": "0.01"
+  },
+  {
+    "id": "deploy_base",
+    "title": "Deploy Contract on Base",
+    "link": "https://remix.ethereum.org",
+    "fee": "0.1"
+  },
+  {
+    "id": "join_discord",
+    "title": "Join Base Discord",
+    "link": "https://discord.gg/qazuzyfU",
+    "fee": "0.01"
+  }
+]
