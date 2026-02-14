@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { claimTask } from "@/lib/claimTask";
+import { claimTaskOnchain } from "../lib/claimTask";
 
 export default function ClaimButton({ taskId }: { taskId: string }) {
   const [state, setState] = useState<"idle" | "loading" | "done">("idle");
@@ -9,9 +9,15 @@ export default function ClaimButton({ taskId }: { taskId: string }) {
   async function onClaim() {
     try {
       setState("loading");
-      await claimTask(taskId);
+
+      // Call your onchain fee function
+      await claimTaskOnchain("0.01"); 
+      // If different tasks have different fees,
+      // you can pass fee dynamically later
+
       setState("done");
     } catch (e) {
+      console.error(e);
       setState("idle");
       alert("Transaction failed");
     }
