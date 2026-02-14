@@ -15,11 +15,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* ✅ Base App Verification */}
+        <meta
+          name="base:app_id"
+          content="697efc162aafa0bc9ad8a3c4"
+        />
+      </head>
+
       <body>
         <WagmiProvider config={wagmiConfig}>
           <QueryClientProvider client={queryClient}>
             <AuthKitProvider
               config={{
+                domain: "exiros.base.vercel.app", // ⚠️ change if your domain is different
+                siweUri: "https://exiros.base.vercel.app",
                 relay: "https://relay.farcaster.xyz",
                 rpcUrl: "https://mainnet.optimism.io",
               }}

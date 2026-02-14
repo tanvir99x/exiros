@@ -7,7 +7,7 @@ export default function FarcasterConnect({
 }: {
   onSuccess: () => void;
 }) {
-  const { signIn, isSuccess } = useSignIn({
+  const { signIn } = useSignIn({
     onSuccess: () => {
       onSuccess();
     },
