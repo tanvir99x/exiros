@@ -12,7 +12,7 @@ export default function ProfileSlide({
   onClose: () => void;
 }) {
   const { address } = useAccount();
-  const { profile } = useProfile();
+  const { profile, isAuthenticated } = useProfile();
 
   const [exi, setExi] = useState(0);
   const [rank, setRank] = useState<number | null>(null);
@@ -34,11 +34,13 @@ export default function ProfileSlide({
         .then((data) => {
           setExi(data.exi || 0);
           setRank(data.rank || null);
-        });
+        })
+        .catch(() => {});
 
       fetch("http://127.0.0.1:8000/leaderboard")
         .then((res) => res.json())
-        .then((data) => setLeaderboard(data));
+        .then((data) => setLeaderboard(data))
+        .catch(() => {});
     }
   }, [open, address]);
 
@@ -80,7 +82,7 @@ export default function ProfileSlide({
       </div>
 
       {/* Farcaster */}
-      {profile && (
+      {isAuthenticated && profile && (
         <div style={{ marginBottom: 20 }}>
           <img
             src={profile.pfpUrl}
@@ -94,7 +96,7 @@ export default function ProfileSlide({
           />
           <p style={{ fontWeight: 600 }}>@{profile.username}</p>
           <p style={{ fontSize: 14, opacity: 0.7 }}>
-            Neynar Score: {profile?.score || 0}
+            FID: {profile.fid}
           </p>
         </div>
       )}
@@ -120,8 +122,7 @@ export default function ProfileSlide({
             style={{
               height: "100%",
               width: `${progress}%`,
-              background:
-                "linear-gradient(90deg, #2f80ff, #56ccf2)",
+              background: "linear-gradient(90deg, #2f80ff, #56ccf2)",
               transition: "width 0.3s ease",
             }}
           />
@@ -133,7 +134,7 @@ export default function ProfileSlide({
       </div>
 
       {/* Rank */}
-      {rank && (
+      {rank !== null && (
         <div style={{ marginBottom: 20 }}>
           <h4>Your Rank</h4>
           <p>#{rank}</p>
