@@ -1,14 +1,13 @@
 import { createConfig, http } from "wagmi";
 import { base } from "wagmi/chains";
-import { injected, walletConnect } from "wagmi/connectors";
+import { injected } from "wagmi/connectors";
 
 export const wagmiConfig = createConfig({
   chains: [base],
   connectors: [
-    injected(),
-    walletConnect({
-      projectId: "YOUR_WALLETCONNECT_PROJECT_ID"
-    })
+    injected({
+      shimDisconnect: true,
+    }),
   ],
   transports: {
     [base.id]: http(),

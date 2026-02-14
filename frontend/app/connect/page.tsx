@@ -10,12 +10,15 @@ import { useProfile } from "@farcaster/auth-kit";
 
 export default function ConnectPage() {
   const router = useRouter();
+
   const { connect } = useConnect();
   const { isConnected } = useAccount();
   const { profile } = useProfile();
 
   useEffect(() => {
-    if (isConnected || profile) router.push("/home");
+    if (isConnected || profile) {
+      router.push("/home");
+    }
   }, [isConnected, profile, router]);
 
   return (
