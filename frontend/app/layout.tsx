@@ -28,7 +28,7 @@ export default function RootLayout({
           <QueryClientProvider client={queryClient}>
             <AuthKitProvider
               config={{
-                domain: "exiros.base.vercel.app", // ⚠️ change if your domain is different
+                domain: "exiros.vercel.app", // ⚠️ change if your domain is different
                 siweUri: "https://exiros.base.vercel.app",
                 relay: "https://relay.farcaster.xyz",
                 rpcUrl: "https://mainnet.optimism.io",
