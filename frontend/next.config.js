@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true
+  async redirects() {
+    return [
+      {
+        source: "/.well-known/farcaster.json",
+        destination:
+          "https://api.farcaster.xyz/miniapps/hosted-manifest/019c60bd-db81-6308-8421-683beee0bbba",
+        permanent: false
+      }
+    ];
+  }
 };
 
 module.exports = nextConfig;
