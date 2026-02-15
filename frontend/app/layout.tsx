@@ -5,8 +5,28 @@ import { WagmiProvider } from "wagmi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { wagmiConfig } from "../lib/wagmi";
 import { AuthKitProvider } from "@farcaster/auth-kit";
+import { useEffect } from "react";
+import sdk from "@farcaster/frame-sdk";
 
 const queryClient = new QueryClient();
+
+/* 🔥 FARCASTER READY COMPONENT */
+function MiniAppReady() {
+  useEffect(() => {
+    async function init() {
+      try {
+        await sdk.actions.ready();
+        console.log("Mini App Ready ✅");
+      } catch (err) {
+        console.log("Not inside Farcaster");
+      }
+    }
+
+    init();
+  }, []);
+
+  return null;
+}
 
 export default function RootLayout({
   children,
@@ -24,12 +44,15 @@ export default function RootLayout({
       </head>
 
       <body>
+        {/* ✅ This removes splash screen */}
+        <MiniAppReady />
+
         <WagmiProvider config={wagmiConfig}>
           <QueryClientProvider client={queryClient}>
             <AuthKitProvider
               config={{
-                domain: "exiros.vercel.app", // ⚠️ change if your domain is different
-                siweUri: "https://exiros.base.vercel.app",
+                domain: "exiros.vercel.app",
+                siweUri: "https://exiros.vercel.app",
                 relay: "https://relay.farcaster.xyz",
                 rpcUrl: "https://mainnet.optimism.io",
               }}
