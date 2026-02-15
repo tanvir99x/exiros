@@ -1,26 +1,27 @@
 {
-    "frame": {
-      "name": "Exiros",
-      "version": "1",
-      "iconUrl": "https://exiros.vercel.app/icon.png",
-      "homeUrl": "https://exiros.vercel.app",
-      "splashImageUrl": "https://exiros.vercel.app/splash.png",
-      "splashBackgroundColor": "#6200EA",
-      "webhookUrl": "https://exiros.vercel.app/api/webhook",
-      "subtitle": "Connect and share instantly",
-      "description": "Complete tasks, earn EXI, climb the leaderboard and grow your onchain identity",
-      "primaryCategory": "social",
-      "tags": [
-        "social",
-        "onchain",
-        "farcaster",
-        "airdrop",
-        "boost"
-      ]
-    },
-    "accountAssociation": {
-      "header": "eyJmaWQiOjEwNDE5NTMsInR5cGUiOiJhdXRoIiwia2V5IjoiMHgzZkE5YTBmNzZEQkNBMkY3OEJlZjYzQTc3ODc1QjY2NTJlZUZjREVDIn0",
-      "payload": "eyJkb21haW4iOiIifQ",
-      "signature": "k3+b9AsaImStXo8yyq8dmjkZcefnYiY53DnX2jKoc7hCXR9XVVptx3fvr4/L50ltAGyuo5KDfcOp5U5SCCpkVRw="
-    }
+  "frame": {
+    "name": "Exiros",
+    "version": "1",
+    "iconUrl": "https://exiros.vercel.app/icon.png",
+    "homeUrl": "https://exiros.vercel.app",
+    "imageUrl": "https://exiros.vercel.app/image.png",
+    "splashImageUrl": "https://exiros.vercel.app/splash.png",
+    "splashBackgroundColor": "#6200EA",
+    "webhookUrl": "https://exiros.vercel.app/api/webhook",
+    "subtitle": "Connect and share instantly",
+    "description": "Complete tasks, earn EXI, climb the leaderboard and grow your onchain identity",
+    "primaryCategory": "social",
+    "tags": [
+      "farcaster",
+      "app",
+      "hot",
+      "onchain",
+      "social"
+    ]
+  },
+  "accountAssociation": {
+    "header": "eyJmaWQiOjEwNDE5NTMsInR5cGUiOiJhdXRoIiwia2V5IjoiMHgzZkE5YTBmNzZEQkNBMkY3OEJlZjYzQTc3ODc1QjY2NTJlZUZjREVDIn0",
+    "payload": "eyJkb21haW4iOiJleGlyb3MudmVyY2VsLmFwcCJ9",
+    "signature": "BObzgJTvKtFEQz8m5ldLSVGsVQ12ylTDrlwTHy2ZhtQYjJWduwW77wr08GG+InlzCZw43qHrUJHp0G2pcsAFXhw="
   }
+}
