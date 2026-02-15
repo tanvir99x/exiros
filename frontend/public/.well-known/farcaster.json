@@ -1,0 +1,27 @@
+{
+    "frame": {
+      "name": "Exiros",
+      "version": "1",
+      "iconUrl": "https://exibot.vercel.app/icon.png",
+      "homeUrl": "https://exibot.vercel.app",
+      "imageUrl": "https://exibot.vercel.app/image.png",
+      "splashImageUrl": "https://exibot.vercel.app/splash.png",
+      "splashBackgroundColor": "#6200EA",
+      "webhookUrl": "https://exibot.vercel.app/api/webhook",
+      "subtitle": "Connect and share instantly",
+      "description": "Complete tasks, earn EXI, climb the leaderboard and grow your onchain identity",
+      "primaryCategory": "social",
+      "tags": [
+        "farcaster",
+        "app",
+        "hot",
+        "onchain",
+        "social"
+      ]
+    },
+    "accountAssociation": {
+      "header": "eyJmaWQiOjEwNDE5NTMsInR5cGUiOiJhdXRoIiwia2V5IjoiMHgzZkE5YTBmNzZEQkNBMkY3OEJlZjYzQTc3ODc1QjY2NTJlZUZjREVDIn0",
+      "payload": "eyJkb21haW4iOiJleGlib3QudmVyY2VsLmFwcCJ9",
+      "signature": "ngGMx+sRX0U3kHwbulnagyEXqMoN12/+9U9rz/10tFRv0g7xaOIsIpqG/itze2WovvcDpHK+9tmKdFFPz4AbdBs="
+    }
+  }
