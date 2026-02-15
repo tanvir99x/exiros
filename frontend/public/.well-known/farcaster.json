@@ -1,0 +1,26 @@
+{
+    "accountAssociation": {
+      "header": "eyJmaWQiOjEwNDE5NTMsInR5cGUiOiJhdXRoIiwia2V5IjoiMHgzZkE5YTBmNzZEQkNBMkY3OEJlZjYzQTc3ODc1QjY2NTJlZUZjREVDIn0",
+      "payload": "eyJkb21haW4iOiJleGlyb3MudmVyY2VsLmFwcCJ9",
+      "signature": "BObzgJTvKtFEQz8m5ldLSVGsVQ12ylTDrlwTHy2ZhtQYjJWduwW77wr08GG+InlzCZw43qHrUJHp0G2pcsAFXhw="
+    },
+    "miniapp": {
+      "version": "1",
+      "name": "Exiros",
+      "iconUrl": "https://exiros.vercel.app/icon.png",
+      "splashImageUrl": "https://exiros.vercel.app/splash.png",
+      "splashBackgroundColor": "#6200EA",
+      "homeUrl": "https://exiros.vercel.app",
+      "webhookUrl": "https://exiros.vercel.app/api/webhook",
+      "subtitle": "Connect and share instantly",
+      "description": "Complete tasks, earn EXI, climb the leaderboard and grow your onchain identity",
+      "primaryCategory": "social",
+      "tags": [
+        "farcaster",
+        "onchain",
+        "social",
+        "base"
+      ]
+    }
+  }
+  
