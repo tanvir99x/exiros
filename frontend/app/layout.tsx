@@ -6,11 +6,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { wagmiConfig } from "../lib/wagmi";
 import { AuthKitProvider } from "@farcaster/auth-kit";
 import { useEffect } from "react";
-import sdk from "@farcaster/frame-sdk";
+import { sdk } from "@farcaster/miniapp-sdk";
 
 const queryClient = new QueryClient();
 
-/* 🔥 FARCASTER READY COMPONENT */
 function MiniAppReady() {
   useEffect(() => {
     async function init() {
@@ -36,7 +35,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* ✅ Base App Verification */}
         <meta
           name="base:app_id"
           content="697efc162aafa0bc9ad8a3c4"
@@ -44,7 +42,6 @@ export default function RootLayout({
       </head>
 
       <body>
-        {/* ✅ This removes splash screen */}
         <MiniAppReady />
 
         <WagmiProvider config={wagmiConfig}>
